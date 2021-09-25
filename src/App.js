@@ -31,8 +31,7 @@ function App() {
     // let index = todos.indexOf(todo);
     // todos.splice(index, 1);
 
-    setTodos(
-      todos.filter((e) => {
+    setTodos(todos.filter((e) => {
         return e !== todo;
       })
     );
@@ -62,7 +61,7 @@ function App() {
   }
 
 
-  const [todos, setTodos] = useState([initTodo]);
+  const [todos, setTodos] = useState(initTodo);
 
   useEffect(() => {
 
@@ -73,7 +72,7 @@ function App() {
   return (
     <>
       <Router>
-        <Header title="My To dosList" searchBar={false} />
+        <Header title="My To-dosList" searchBar={false} />
 
         <Switch>
           <Route exact path="/" render={() => {
